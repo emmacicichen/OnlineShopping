@@ -30,7 +30,7 @@
 
                 <!-- Only admin can view this link -->
                 <security:authorize access="hasRole('ROLE_ADMIN')">
-                    <li><a href=" <c:url value="/admin/product/addProduct" />">Add
+                    <li><a href=" <c:url value="/admin/product/addProduct" />">Add<!--??????get??-->
                         Product</a></li>
                 </security:authorize>
             </ul>

@@ -34,7 +34,7 @@
 					<th>Stock Unit</th>
 					<th>Description</th>
 					<th>Manufacturer</th>
-					<th>View
+					<th>View <!--view???????? ??????trigger-->
 					<security:authorize access="hasRole('ROLE_USER')" >
 						/Add to Cart
 					</security:authorize> 
@@ -56,7 +56,7 @@
 						<td style="width: 180px">${prod.productDescription}</td>
 						<td>${prod.productManufacturer}</td>
 						<td ng-controller="myController">
-							<a href="getProductById/${prod.id}" class="btn btn-info"
+							<a href="getProductById/${prod.id}" class="btn btn-info"  <!--??view???-->
 								role="button"> <span class="glyphicon glyphicon-info-sign"></span>
 							</a>
 

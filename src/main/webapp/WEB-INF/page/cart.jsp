@@ -22,7 +22,7 @@
      style="width: 1145px; margin-top: 20px; margin-bottom: 180px;">
     <div ng-app="myapp" ng-controller="myController"
          style="margin-bottom: 30px">
-        <div ng-init="getCart(${cartId})">
+        <div ng-init="getCart(${cartId})">   <!--aject call? Angular???25?62?-->
             <br>Products Purchased
             <div>
                 <a class="btn btn-primary pull-left" ng-click="clearCart()"

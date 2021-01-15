@@ -17,7 +17,7 @@ public class CustomerService {
     public void addCustomer(Customer customer) {//创建customer时候 我要给他一个购物车
         customer.getUser().setEnabled(true);//setEnable是springsecurity框架设置用户的时候就给set成true，注销用户的时候就是set false。（soft delete）
 
-        Cart cart = new Cart();
+        Cart cart = new Cart();//我们需要new一个cart，因为在前端register时候，所有信息都会被绑定，除了cart，所以我们要自己new
         customer.setCart(cart);
 
         customerDao.addCustomer(customer);

@@ -11,8 +11,8 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @Configuration
 @EnableWebMvc //tell SpringMVC to create MVC related default class
 public class ApplicationConfig {
-
-    @Bean(name = "sessionFactory")
+//在configure的file里就是你要用的什么其他的library里的东西，通过bean来创建
+    @Bean(name = "sessionFactory") //这个session是external class，他是ApplicationConfig的dependency，我们需要在config文件里new出来，初始化，我们要通过@Bean创建
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());

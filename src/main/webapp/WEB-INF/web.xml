@@ -6,22 +6,22 @@
 	<display-name>OnlineShop WebSite</display-name>
 
 	<!-- to connect the dispatcher servlet and applicationContext -->
-	<context-param>
+	<context-param><!-- spring就是一个applicationContext -->
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-			/WEB-INF/onlineShop-servlet.xml,
+			/WEB-INF/onlineShop-servlet.xml,<!-- 告诉spring创建这两个file -->
 			/WEB-INF/webflowConfig.xml
 		</param-value>
 	</context-param>
 
 	<filter>
-		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-name>springSecurityFilterChain</filter-name> <!--can add all the filters once -->
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
 	</filter>
 
 	<filter-mapping>
 		<filter-name>springSecurityFilterChain</filter-name>
-		<url-pattern>/*</url-pattern>
+		<url-pattern>/*</url-pattern> <!--onlineshop/ all urls  -->
 	</filter-mapping>
 
 	<!-- it is used to listen the contextloader -->
